@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Tundra Tiles
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 21300000, guid: 64058e4e83cef284bbe1b66412857605, type: 3}
+    - {fileID: 21300000, guid: db3f374d0afc2c04897872b1c90ea4e4, type: 3}
+    - {fileID: 21300000, guid: ab164fa466bc70943affa5eae0e9d390, type: 3}
+    - {fileID: 21300000, guid: 36cb46bae7871b84aa8ea1132c883be3, type: 3}
+    - {fileID: 21300000, guid: 9243f941aa86fb24d88c7f6939f272cd, type: 3}
+    totalSpriteSurfaceArea: 1250000
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 9243f941aa86fb24d88c7f6939f272cd, type: 3}
+  - {fileID: 21300000, guid: ab164fa466bc70943affa5eae0e9d390, type: 3}
+  - {fileID: 21300000, guid: 36cb46bae7871b84aa8ea1132c883be3, type: 3}
+  - {fileID: 21300000, guid: db3f374d0afc2c04897872b1c90ea4e4, type: 3}
+  - {fileID: 21300000, guid: 64058e4e83cef284bbe1b66412857605, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - TundraTile5Final
+  - TundraTile3Final
+  - TundraTile4Final
+  - TundraTile2Final
+  - TundraTile1Final
+  m_Tag: Tundra Tiles
+  m_IsVariant: 0
