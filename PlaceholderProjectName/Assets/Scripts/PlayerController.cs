@@ -1,5 +1,5 @@
 ﻿/*
-Written by Max Logan, July 29th 2020
+Written by Max Logan, August 2nd, 2020
 Starter Code from https://stuartspixelgames.com/2018/06/24/simple-2d-top-down-movement-unity-c/
 */
 
@@ -10,7 +10,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     float horizontal, vertical;
     Rigidbody rb;
 
@@ -27,10 +26,22 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+
+        // melee attack
+        if (Input.GetKeyDown("enter") || Input.GetMouseButtonDown(0))
+        {
+            MeleeAttack();
+        }
     }
 
     void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+    }
+
+    void MeleeAttack()
+    {
+        // start animation
+        // check for collision
     }
 }
