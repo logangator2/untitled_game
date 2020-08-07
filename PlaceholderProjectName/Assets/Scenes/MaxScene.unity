@@ -268,6 +268,8 @@ GameObject:
   - component: {fileID: 870448996}
   - component: {fileID: 870448998}
   - component: {fileID: 870448997}
+  - component: {fileID: 870449000}
+  - component: {fileID: 870448999}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -10215,6 +10217,43 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &870448999
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870448995}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!50 &870449000
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870448995}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 3
 --- !u!1 &936148937
 GameObject:
   m_ObjectHideFlags: 0
@@ -10298,6 +10337,116 @@ Transform:
   m_Father: {fileID: 1866959899}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1054444581
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425756, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425757, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425757, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 84ce2f114ad12bd4ebafc77060220324,
+        type: 3}
+    - target: {fileID: 1978979409586425758, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1054444583}
+    - target: {fileID: 1978979409586425759, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ccfa133b582bd04e9fea85861a9968d, type: 3}
+--- !u!1 &1054444582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1978979409586425759, guid: 1ccfa133b582bd04e9fea85861a9968d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1054444581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1054444583
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054444582}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8075caa2eee214266849999d1a016b94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1866959896
 GameObject:
   m_ObjectHideFlags: 0
@@ -10312,12 +10461,12 @@ GameObject:
   - component: {fileID: 1866959900}
   - component: {fileID: 1866959901}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: Player(Bad)
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1866959897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10331,6 +10480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 10
+  meleeDamage: 10
+  playerAnimator: {fileID: 1866959901}
 --- !u!212 &1866959898
 SpriteRenderer:
   m_ObjectHideFlags: 0

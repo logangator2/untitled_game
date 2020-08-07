@@ -11,9 +11,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     float horizontal, vertical;
-    Rigidbody rb;
+    Rigidbody rb; 
 
     public float runSpeed = 20f;
+    public float meleeDamage = 10f;
+    public Animator playerAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,7 @@ public class PlayerController : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
 
         // melee attack
-        if (Input.GetKeyDown("enter") || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0))
         {
             MeleeAttack();
         }
@@ -37,11 +39,14 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        playerAnimator.SetFloat("Speed", horizontal * runSpeed);
     }
 
     void MeleeAttack()
     {
         // start animation
+        playerAnimator.SetTrigger("Attack");
         // check for collision
+        // do damage
     }
 }
