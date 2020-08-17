@@ -196,8 +196,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 745333785
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 907916455944482782, guid: b06e1e749164d7842954a047e8698140, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -257,6 +257,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &985903090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1978979409586425759, guid: 1ccfa133b582bd04e9fea85861a9968d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1227650353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &985903091
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985903090}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1171909440
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,27 +453,28 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425757, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 745333785
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978979409586425757, guid: 1ccfa133b582bd04e9fea85861a9968d,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1978979409586425758, guid: 1ccfa133b582bd04e9fea85861a9968d,
         type: 3}
       propertyPath: runSpeed
-      value: 1.44
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 1978979409586425759, guid: 1ccfa133b582bd04e9fea85861a9968d,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1978979409586425759, guid: 1ccfa133b582bd04e9fea85861a9968d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1978979410534857806, guid: 1ccfa133b582bd04e9fea85861a9968d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1978979409586425755, guid: 1ccfa133b582bd04e9fea85861a9968d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ccfa133b582bd04e9fea85861a9968d, type: 3}
 --- !u!1 &1796991533
 GameObject:
@@ -524,7 +552,7 @@ TilemapRenderer:
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 3
-  m_Mode: 0
+  m_Mode: 1
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
 --- !u!1839735485 &1796991536
