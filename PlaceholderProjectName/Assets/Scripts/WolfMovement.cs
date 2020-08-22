@@ -12,7 +12,8 @@ public class WolfMovement : MonoBehaviour
     public int movementDir = 0;
     public GameObject player;
     public NavMeshAgent agent;
-    private Vector3 oldPosition, velocity;
+    private Vector3 oldPosition;
+    public Vector3 velocity;
 
 
     // Start is called before the first frame update
@@ -24,7 +25,7 @@ public class WolfMovement : MonoBehaviour
     }
     void Awake()
     {
-        
+        StartCoroutine(ChangeSpriteDir());
     }
 
     // Update is called once per frame
@@ -36,54 +37,8 @@ public class WolfMovement : MonoBehaviour
         oldPosition = transform.position;
         horizontal = 0;
         vertical = 0;
-        if (velocity.x > 0f)
-        {
-            // Moving left
-            horizontal = -1;
-        }
-        else if (velocity.x < 0f)
-        {
-            // Moving right
-            horizontal = 1;
-        }
-        if (velocity.y > 0f)
-        {
-            // Moving down
-            vertical = -1;
-        }
-        else if (velocity.y < 0f)
-        {
-            // Moving up
-            vertical = 1;
-        }
 
-        // TODO: Clean code below, it's mostly redundant because of the above.
-        if (horizontal == -1)
-        {
-            movementDir = 4;
-        }
-        else if (horizontal == 1)
-        {
-            movementDir = 2;
-        }
-        else
-        {
-            if (vertical == -1)
-            {
-                movementDir = 3;
-            }
-            else if (vertical == 1)
-            {
-                movementDir = 1;
-            }
-            else
-            {
-                movementDir = movementDir * -1;
-            }
-        }
-
-        anim.SetInteger("MovementDirection", movementDir);
-
+        
         transform.position = agent.transform.position;
         agent.destination = player.transform.position;
         //rb.velocity = new Vector2(horizontal * movementSpeed, vertical * movementSpeed);
@@ -93,6 +48,62 @@ public class WolfMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        
+    }
+
+    IEnumerator ChangeSpriteDir()
+    {
+        while (true)
+        {
+            if (velocity.x > 0f)
+            {
+                // Moving left
+                horizontal = -1;
+            }
+            else if (velocity.x < 0f)
+            {
+                // Moving right
+                horizontal = 1;
+            }
+            if (velocity.y > 0.004f)
+            {
+                // Moving down
+                vertical = -1;
+            }
+            else if (velocity.y < -0.004f)
+            {
+                // Moving up
+                vertical = 1;
+            }
+
+            // TODO: Clean code below, it's mostly redundant because of the above.
+            if (horizontal == -1 && vertical == 0)
+            {
+                movementDir = 4;
+            }
+            else if (horizontal == 1 && vertical == 0)
+            {
+                movementDir = 2;
+            }
+            else
+            {
+                if (vertical == -1)
+                {
+                    movementDir = 3;
+                }
+                else if (vertical == 1)
+                {
+                    movementDir = 1;
+                }
+                else
+                {
+                    movementDir = movementDir * -1;
+                }
+            }
+
+            anim.SetInteger("MovementDirection", movementDir);
+            yield return new WaitForSeconds(0.5f);
+        }
         
     }
 
