@@ -54,6 +54,10 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
         }
         playerAnimator.SetFloat("Speed", Mathf.Abs(horizontal * runSpeed));
+        if (playerAnimator.GetFloat("Speed") == 0 && vertical != 0)
+        {
+            playerAnimator.SetFloat("Speed", Mathf.Abs(vertical * runSpeed));
+        }
         if (horizontal < 0f)
         {
             // Facing Left
