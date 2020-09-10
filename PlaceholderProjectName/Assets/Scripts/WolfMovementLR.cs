@@ -9,16 +9,17 @@ public class WolfMovementLR : MonoBehaviour
     private Rigidbody2D rb;
     public Animator anim;
     public float movementSpeed = 20f;
-    public int movementDir = 0;
+    public int movementDir = 0, biteCooldownTime = 3;
     public GameObject player;
     public NavMeshAgent agent;
     private Vector3 oldPosition;
     public Vector3 velocity;
+    private bool biteCooldown = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponentInParent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         //StartCoroutine(WaitForDirChange());
     }
@@ -75,6 +76,17 @@ public class WolfMovementLR : MonoBehaviour
 
         transform.position = agent.transform.position;
         agent.destination = player.transform.position;
+        if (biteCooldown == false && Vector2.Distance(transform.position, player.transform.position) < 0.5f)
+        {
+            biteCooldown = true;
+            StartCoroutine(initBiteCooldown());
+            rb.AddForce((player.transform.position - transform.position) * 100);
+            if (Random.Range(1, 3) == 1)
+            {
+                player.GetComponent<PlayerController>().PlayerReduceHealth(transform.parent.GetComponent<WolfStats>().damage);
+                Debug.Log("Wolf Bite Hit!");
+            }
+        }
         //rb.velocity = new Vector2(horizontal * movementSpeed, vertical * movementSpeed);
         //localVelocity = transform.InverseTransformDirection(rb.velocity);
         //Debug.Log(localVelocity);
@@ -95,5 +107,11 @@ public class WolfMovementLR : MonoBehaviour
             
             yield return new WaitForSeconds(3);
         }
+    }
+
+    IEnumerator initBiteCooldown()
+    {
+        yield return new WaitForSeconds(biteCooldownTime);
+        biteCooldown = false;
     }
 }
